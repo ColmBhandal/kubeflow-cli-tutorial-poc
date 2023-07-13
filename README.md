@@ -35,3 +35,29 @@ npm start
 ```
 
 Open your web browser and visit: http://localhost:3000.
+
+## Building, Install & Run snap locally
+
+### Build
+
+Install snapcraft
+
+Init lxd: `lxd init --auto`
+
+Run the snap build:
+
+```bash
+snapcraft
+```
+
+### Install
+
+After the snap is built, from within the snap directory:
+
+```bash
+sudo snap install kubeflow-interactive-tutorial_1.0_amd64.snap --dangerous
+```
+
+### Run
+
+kubeflow-interactive-tutorial.frontend
