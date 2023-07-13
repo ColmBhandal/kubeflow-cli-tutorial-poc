@@ -1,0 +1,17 @@
+# Ignore build output
+**/build/
+**/dist/
+**/out/
+
+# Ignore dependencies
+**/node_modules/
+
+# Ignore development server files
+**/.env*
+**/.env.*.local
+
+# Ignore package.json files
+**/package.json
+
+# Ignore package-lock.json files for npm
+**/package-lock.json
