@@ -11,11 +11,13 @@ parts:
   frontend:
     plugin: npm
     source: ./frontend
+    npm-include-node: true
     npm-node-version: "18.16.1"
 
   backend:
     plugin: npm
     source: ./backend
+    npm-include-node: true
     npm-node-version: "18.16.1"
 
 apps:
