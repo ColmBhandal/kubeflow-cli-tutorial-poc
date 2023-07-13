@@ -5,6 +5,8 @@ description: |
   This is a POC of the Kubeflow Interactive Tutorial application.
 confinement: strict
 
+base: core22
+
 apps:
   frontend:
     command: node frontend/server.js
