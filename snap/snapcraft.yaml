@@ -7,30 +7,29 @@ confinement: strict
 
 base: core22
 
+parts:
+  frontend:
+    plugin: npm
+    source: ./frontend
+    npm-node-version: "18.16.1"
+
+  backend:
+    plugin: npm
+    source: ./backend
+    npm-node-version: "18.16.1"
+
 apps:
   frontend:
-    command: node frontend/server.js
+    command: npm start --prefix $SNAP/frontend
     daemon: simple
     plugs: [network-bind]
     environment:
       PORT: "3000"
       NODE_ENV: "production"
   backend:
-    command: node backend/server.js
+    command: npm start --prefix $SNAP/backend
     daemon: simple
     plugs: [network-bind]
     environment:
       PORT: "4000"
       NODE_ENV: "production"
-
-parts:
-  frontend:
-    plugin: nodejs
-    source: frontend
-    node-engine: "18.16.1"
-
-  backend:
-    plugin: nodejs
-    source: backend
-    node-engine: "18.16.1"
-
